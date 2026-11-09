@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-start justify-between gap-4 sm:items-center sm:flex-row text-sm font-medium">
             <p className="text-muted-foreground">
-              © <CopyrightYear /> Codecko. All rights reserved.
+              © <CopyrightYear /> Antecko. All rights reserved.
             </p>
             <ul>
               <li>
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
           <div className="@container mt-8 select-none overflow-hidden">
             <p className="whitespace-nowrap text-center font-mono text-[20cqw] font-black uppercase leading-[0.8] tracking-tight text-muted-foreground/20">
-              Codecko
+              Antecko
             </p>
           </div>
         </div>
