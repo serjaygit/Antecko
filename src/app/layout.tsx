@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { cn } from "cn";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import Header from "@/widgets/header/Header";
+import Footer from "@/widgets/footer/Footer";
+
+const serif = Space_Grotesk({
   subsets: ["latin"],
+  variable: "--font-serif",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sans = Inter({
   subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -21,9 +30,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
+      className={cn(serif.variable, mono.variable, sans.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="antialiased">
+        <Header />
+        <main className="min-h-screen py-24">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
