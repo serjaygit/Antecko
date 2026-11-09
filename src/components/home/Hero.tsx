@@ -20,7 +20,7 @@ export default function Hero() {
       />
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
-          {/* Left: message */}
+          {/* Left Block */}
           <div>
             <h1 className="font-heading font-semibold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-balance max-w-2xl mb-6">
               Web development that{" "}
@@ -53,40 +53,28 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: snapshot card */}
-          <div className="relative w-full max-w-md mx-auto lg:max-w-none rounded-2xl border border-ink-700 bg-ink-900/60 backdrop-blur-sm p-6 sm:p-8 overflow-hidden">
+          {/* Right Block */}
+          <div className="relative w-full lg:max-w-lg mx-auto rounded-2xl border border-ink-700 bg-ink-900/60 backdrop-blur-sm p-6 sm:p-8 overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 blur-2xl rounded-full" />
             <div className="relative">
               <p className="font-mono text-xs text-ink-500 uppercase tracking-widest mb-6">
                 Studio snapshot
               </p>
-              <dl className="grid grid-cols-2 gap-x-4 gap-y-6 sm:gap-6">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-6 sm:gap-6">
                 {stats.map((stat) => (
-                  <div
+                  <li
                     key={stat.label}
-                    className="flex flex-col-reverse border-l-2 border-ink-700 pl-4"
+                    className="flex flex-col-reverse border-l-2 border-border pl-4"
                   >
-                    <dt className="text-xs text-ink-500 mt-1">{stat.label}</dt>
-                    <dd className="font-display text-2xl sm:text-3xl font-semibold text-ink-100">
+                    <h3 className="text-xs text-muted-foreground mt-1">
+                      {stat.label}
+                    </h3>
+                    <p className="font-heading text-2xl sm:text-3xl font-semibold text-ink-100">
                       {stat.value}
-                    </dd>
-                  </div>
+                    </p>
+                  </li>
                 ))}
-              </dl>
-              <div className="mt-8 pt-6 border-t border-ink-700/60 flex flex-wrap items-center justify-between gap-3">
-                <div className="flex -space-x-2">
-                  {["#c8ff3e", "#525252", "#a1a1aa", "#71717a"].map((c) => (
-                    <div
-                      key={c}
-                      className="w-8 h-8 rounded-full border-2 border-ink-900"
-                      style={{ background: c }}
-                    />
-                  ))}
-                </div>
-                <span className="text-xs text-ink-500">
-                  Trusted by founders & teams
-                </span>
-              </div>
+              </ul>
             </div>
           </div>
         </div>

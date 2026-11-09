@@ -5,19 +5,19 @@ export const HEADER_DATA = [
     sublinks: [
       {
         label: "Landing Page Development",
-        href: "/landing",
+        href: "/landing-pages",
       },
       {
         label: "Business Website Development",
-        href: "/business",
+        href: "/business-websites",
       },
       {
         label: "Custom Website Development",
-        href: "/custom",
+        href: "/custom-websites",
       },
       {
         label: "SEO Optimization",
-        href: "/seo",
+        href: "/seo-optimization",
       },
     ],
   },
