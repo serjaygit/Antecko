@@ -49,7 +49,7 @@
   --sidebar-border: #2b2b2b;
   --sidebar-ring: #c8ff3e;
 
-  --radius: 1.25rem;
+  --radius: 1rem;
   --shadow-x: 0px;
   --shadow-y: 4px;
   --shadow-blur: 12px;
@@ -132,5 +132,8 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+  html {
+    @apply scroll-smooth;
   }
 }

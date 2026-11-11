@@ -37,13 +37,13 @@ export const PROCESS_DATA: ProcessStep[] = [
 
 export default function Process() {
   return (
-    <section className="py-16 lg:py-24 bg-card">
+    <section className="py-16 lg:py-24 bg-card" id="process">
       <Container>
         <Heading
           title="A clear path from first call to launch day"
           badge="Process"
         />
-        <ul className="grid gap-px overflow-hidden rounded-md border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid gap-px overflow-hidden rounded-md border border-border bg-border md:grid-cols-2 lg:grid-cols-4 cursor-default">
           {PROCESS_DATA.map(({ icon: Icon, title, description }, index) => (
             <li
               key={title}

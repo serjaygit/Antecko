@@ -3,11 +3,11 @@ type TFaq = {
   answer: string;
 };
 
-export const faqs: TFaq[] = [
+export const FAQ_DATA: TFaq[] = [
   {
     question: "How long does a website take?",
     answer:
-      "A focused landing page usually takes 2–3 weeks. A multi-page business site takes 4–6 weeks, while custom systems are scoped after discovery.",
+      "A focused landing page usually takes 2-3 weeks. A multi-page business site takes 4-6 weeks, while custom systems are scoped after discovery.",
   },
   {
     question: "Can you help with the copy and structure?",

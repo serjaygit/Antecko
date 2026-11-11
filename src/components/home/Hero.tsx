@@ -2,6 +2,7 @@ import QuoteModal from "@/features/quote/ui/QuoteModal";
 import Container from "../shared/Container";
 import { Button } from "../ui/button";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const stats = [
   { value: "48h", label: "Reply to every enquiry" },
@@ -47,8 +48,9 @@ export default function Hero() {
                 variant="outline"
                 size="lg"
                 className="px-4 py-6 rounded-full"
+                asChild
               >
-                Explore Services
+                <Link href="/#services">Explore Services</Link>
               </Button>
             </div>
           </div>

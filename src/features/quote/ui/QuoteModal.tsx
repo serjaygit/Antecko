@@ -12,7 +12,7 @@ import { LucideIcon } from "lucide-react";
 
 interface Props {
   title: string;
-  variant?: "default" | "secondary";
+  variant?: "default" | "secondary" | "outline";
   className?: string;
   icon?: LucideIcon;
 }

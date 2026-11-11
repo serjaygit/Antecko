@@ -2,22 +2,42 @@ interface Props {
   title: string;
   badge: string;
   description?: string;
+  /** Keep title and description in one column on large screens (for narrow columns) */
+  stacked?: boolean;
 }
 
-export default function Heading({ title, badge, description }: Props) {
+export default function Heading({
+  title,
+  badge,
+  description,
+  stacked = false,
+}: Props) {
   return (
-    <div className="grid lg:grid-cols-12 gap-4 mb-8 lg:mb-16">
-      <div className="lg:col-span-4">
-        <p className="font-mono text-xs text-secondary uppercase tracking-widest mb-4">
+    <div
+      className={`mb-8 flex flex-col gap-4 lg:mb-12 ${
+        stacked
+          ? ""
+          : "lg:mb-16 lg:flex-row lg:items-end lg:justify-between lg:gap-12"
+      }`}
+    >
+      <div className={stacked ? "" : "lg:max-w-xl"}>
+        <p className="mb-4 font-mono text-xs uppercase tracking-widest text-secondary">
           / {badge}
         </p>
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.1] text-balance">
+        <h2 className="font-heading text-3xl font-semibold leading-[1.1] tracking-tight text-balance sm:text-4xl lg:text-5xl">
           {title}
         </h2>
       </div>
-      <div className="lg:col-span-5 lg:col-start-8 flex items-end">
-        <p className="text-muted-foreground leading-relaxed">{description}</p>
-      </div>
+
+      {description && (
+        <p
+          className={`leading-relaxed text-muted-foreground ${
+            stacked ? "max-w-md" : "lg:max-w-md"
+          }`}
+        >
+          {description}
+        </p>
+      )}
     </div>
   );
 }
